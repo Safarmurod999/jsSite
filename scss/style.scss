@@ -130,6 +130,32 @@ header {
     }
   }
 }
+#navbar-catalog{
+  display: none;
+}
+.catalog-box {
+  width: 100%;
+  padding: 40px 0;
+  h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #414141;
+    margin-bottom: 24px;
+    &:hover{
+      color: #FF6633;
+    }
+  }
+}
+.display{
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  display: block !important;
+}
 @media (max-width: 900px) {
   nav {
     .nav-menus {
@@ -402,17 +428,17 @@ header {
   }
 }
 
-@media(max-width:992px){
+@media (max-width: 992px) {
   .footer {
     padding: 38px 0;
     margin-bottom: 70px;
     &__nav {
       flex-grow: 1;
-      li a{
+      li a {
         margin: 0 8px;
       }
     }
-    p{
+    p {
       white-space: nowrap;
     }
   }

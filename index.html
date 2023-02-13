@@ -22,11 +22,11 @@
             <img class="d-block d-lg-none" src="images/logo-2.png" alt="..." />
           </div>
           <div class="search d-flex flex-row justify-content-between">
-            <a class="catalog d-none d-md-flex" href="#"
+            <button class="catalog d-none d-md-flex" onclick="display()" href="#"
               ><img src="images/menu.png" alt="..." /><span
                 class="d-none d-xl-block"
                 >Каталог</span
-              ></a
+              ></button
             >
             <div class="search-inner position-relative">
               <input type="search" placeholder="Найти товар" />
@@ -81,6 +81,36 @@
             </ul>
           </div>
         </div>
+       
+      </nav>
+      <nav id="navbar-catalog" class="navbar">
+        <div class="container">
+          <div class="catalog-box">
+            <div class="row">
+              <div class="col-3">
+                <h4>Молоко, сыр, яйцо</h4>
+                <h4>Хлеб</h4>
+                <h4>Фрукты и овощи</h4>
+                <h4>Замороженные продукты</h4>
+              </div>
+              <div class="col-3">
+                <h4>Напитки</h4>
+                <h4>Кондитерские изделия</h4>
+                <h4>Чай, кофе</h4>
+              </div>
+              <div class="col-3">
+                <h4>Бакалея</h4>
+                <h4>Здоровое питание</h4>
+                <h4>Зоотовары</h4>
+              </div>
+              <div class="col-3">
+                <h4>Непродовольственные товары</h4>
+                <h4>Детское питание</h4>
+                <h4>Мясо, птица, колбаса</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -105,7 +135,7 @@
         </div>
       </div>
       <section class="top">
-        <img class="img-fluid" src="images/sliders.png" alt="..." />
+        <img class="w-100" src="images/sliders.png" alt="..." />
       </section>
       <section class="stock">
         <div class="container">

@@ -16,3 +16,7 @@
 //   toggleBacktop();
 // });
 
+function display() {
+  let catalog=document.getElementById("navbar-catalog");
+  catalog.classList.toggle("display");
+}

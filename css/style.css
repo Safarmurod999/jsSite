@@ -133,6 +133,35 @@ header nav ul li a:hover {
   opacity: 0.7;
 }
 
+#navbar-catalog {
+  display: none;
+}
+
+.catalog-box {
+  width: 100%;
+  padding: 40px 0;
+}
+.catalog-box h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #414141;
+  margin-bottom: 24px;
+}
+.catalog-box h4:hover {
+  color: #FF6633;
+}
+
+.display {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  display: block !important;
+}
+
 @media (max-width: 900px) {
   nav .nav-menus {
     display: none !important;
