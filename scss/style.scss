@@ -24,6 +24,9 @@ button {
 ul {
   list-style-type: none;
 }
+main {
+  overflow: hidden;
+}
 #backtop {
   border: none;
   position: fixed;
@@ -135,7 +138,7 @@ header {
     .search {
       &-inner {
         input {
-          width: 325px !important;
+          width: 295px !important;
         }
       }
     }
@@ -169,7 +172,7 @@ header {
     color: #414141;
   }
   .row {
-    width: 100%!important;
+    width: 100% !important;
     padding: 0 !important;
   }
   &-link {
@@ -257,7 +260,7 @@ header {
         background: #e5ffde;
       }
     }
-    img{
+    img {
       height: 186px;
     }
   }
@@ -293,13 +296,77 @@ header {
     }
   }
 }
-.location{
+.location {
   padding: 64px 0 40px;
-  .nav-pills .nav-link{
-    background-color: #F3F2F1;
+  background-color: #fbf8ec;
+  .nav-pills .nav-link {
+    background-color: #f3f2f1;
   }
-  .nav-pills .nav-link.active{
+  .nav-pills .nav-link.active {
     background-color: #70c05b !important;
+  }
+}
+.status {
+  padding: 64px 0 40px;
+  background-color: #fbf8ec;
+  &__card {
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    &:hover {
+      box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+    }
+    img {
+      width: 100%;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    div {
+      padding: 10px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+    }
+    h5 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      color: #8f8f8f;
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      color: #414141;
+      margin-bottom: 10px;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #414141;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 150px;
+      text-align: center;
+      padding: 8px;
+      background: #e5ffde;
+      border-radius: 4px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #70c05b;
+      &:hover {
+        background-color: #70c05b;
+        color: #fff;
+      }
+    }
   }
 }
 @media (max-width: 992px) {
@@ -310,5 +377,43 @@ header {
 @media (max-width: 768px) {
   .stock__card:last-child {
     display: flex !important;
+  }
+}
+
+//home end
+
+// footer start
+
+.footer {
+  padding: 24px 0;
+  background-color: #fbf8ec;
+  overflow: hidden;
+  // background-position: cover;
+  &__nav {
+    flex-grow: 1;
+    li a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      color: #414141;
+      margin: 0 20px;
+    }
+  }
+}
+
+@media(max-width:992px){
+  .footer {
+    padding: 38px 0;
+    margin-bottom: 70px;
+    &__nav {
+      flex-grow: 1;
+      li a{
+        margin: 0 8px;
+      }
+    }
+    p{
+      white-space: nowrap;
+    }
   }
 }

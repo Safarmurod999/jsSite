@@ -25,6 +25,10 @@ ul {
   list-style-type: none;
 }
 
+main {
+  overflow: hidden;
+}
+
 #backtop {
   border: none;
   position: fixed;
@@ -134,7 +138,7 @@ header nav ul li a:hover {
     display: none !important;
   }
   nav .search-inner input {
-    width: 325px !important;
+    width: 295px !important;
   }
   .nav-sm {
     padding: 8px 12px;
@@ -281,12 +285,77 @@ header nav ul li a:hover {
 
 .location {
   padding: 64px 0 40px;
+  background-color: #fbf8ec;
 }
 .location .nav-pills .nav-link {
-  background-color: #F3F2F1;
+  background-color: #f3f2f1;
 }
 .location .nav-pills .nav-link.active {
   background-color: #70c05b !important;
+}
+
+.status {
+  padding: 64px 0 40px;
+  background-color: #fbf8ec;
+}
+.status__card {
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.status__card:hover {
+  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+.status__card img {
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.status__card div {
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.status__card h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #8f8f8f;
+  margin-bottom: 10px;
+}
+.status__card h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #414141;
+  margin-bottom: 10px;
+}
+.status__card p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #414141;
+  margin-bottom: 10px;
+}
+.status__card button {
+  width: 150px;
+  text-align: center;
+  padding: 8px;
+  background: #e5ffde;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #70c05b;
+}
+.status__card button:hover {
+  background-color: #70c05b;
+  color: #fff;
 }
 
 @media (max-width: 992px) {
@@ -297,5 +366,37 @@ header nav ul li a:hover {
 @media (max-width: 768px) {
   .stock__card:last-child {
     display: flex !important;
+  }
+}
+.footer {
+  padding: 24px 0;
+  background-color: #fbf8ec;
+  overflow: hidden;
+}
+.footer__nav {
+  flex-grow: 1;
+}
+.footer__nav li a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #414141;
+  margin: 0 20px;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 38px 0;
+    margin-bottom: 70px;
+  }
+  .footer__nav {
+    flex-grow: 1;
+  }
+  .footer__nav li a {
+    margin: 0 8px;
+  }
+  .footer p {
+    white-space: nowrap;
   }
 }
