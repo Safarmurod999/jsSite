@@ -35,7 +35,7 @@ let stockObject = [
 
 let stockRow = document.getElementById("stockRow");
 
-function getCard(img, cardprice, def, des) {
+function getCard(img,top,discount, cardprice, def, des) {
   let stockCard = document.createElement("div");
   stockCard.className = "stock__card";
   stockCard.classList.add("col-6");
@@ -48,6 +48,16 @@ function getCard(img, cardprice, def, des) {
   card_img.className = "w-100";
   card_img.classList.add("stock__card-img");
   stockCard.append(card_img);
+
+  let card_top =document.createElement("img");
+  card_top.src=top;
+  card_top.className="top";
+  stockCard.append(card_top);
+
+  let card_dis=document.createElement("img");
+  card_dis.src=discount;
+  card_dis.classList.add("discount");
+  stockCard.append(card_dis);
 
   let card_body = document.createElement("div");
 
@@ -88,7 +98,7 @@ function getCard(img, cardprice, def, des) {
   return stockCard;
 }
 for (el of stockObject) {
-  let card = getCard(el.img, el.cardPrice, el.defPrice, el.description);
+  let card = getCard(el.img,el.top,el.discount, el.cardPrice, el.defPrice, el.description);
   stockRow.append(card);
 }
 
@@ -125,7 +135,7 @@ let newObject = [
 
 let newRow = document.getElementById("newRow");
 
-function getCard2(img, cardprice, des) {
+function getCard2(img,top,cardprice, des) {
   let stockCard = document.createElement("div");
   stockCard.className = "stock__card";
   stockCard.classList.add("col-6");
@@ -138,6 +148,11 @@ function getCard2(img, cardprice, des) {
   card_img.className = "w-100";
   card_img.classList.add("stock__card-img");
   stockCard.append(card_img);
+
+  let card_top =document.createElement("img");
+  card_top.src=top;
+  card_top.className="top";
+  stockCard.append(card_top);
 
   let card_body = document.createElement("div");
   let h3_2 = document.createElement("h3");
@@ -172,7 +187,7 @@ function getCard2(img, cardprice, des) {
 }
 
 for (el of newObject) {
-  let card = getCard2(el.img, el.cardPrice, el.description);
+  let card = getCard2(el.img,el.top,el.cardPrice, el.description);
   newRow.append(card);
 }
 
@@ -210,7 +225,7 @@ let prevObject = [
 ];
 
 for (el of prevObject) {
-  let card = getCard2(el.img, el.cardPrice, el.description);
+  let card = getCard2(el.img,el.top, el.cardPrice, el.description);
   prevRow.append(card);
 }
 

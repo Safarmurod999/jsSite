@@ -271,6 +271,18 @@ header {
       }
     }
   }
+  .top{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    width: auto;
+  }
+  .discount{
+    position: absolute;
+    left: 20px;
+    top: 120px;
+    width: auto;
+  }
 }
 .special {
   background-color: #fbf8ec;

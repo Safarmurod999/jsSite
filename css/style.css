@@ -267,6 +267,18 @@ header nav ul li a:hover {
   color: #fff;
   border-color: #ff6633;
 }
+.stock .top {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  width: auto;
+}
+.stock .discount {
+  position: absolute;
+  left: 20px;
+  top: 120px;
+  width: auto;
+}
 
 .special {
   background-color: #fbf8ec;
