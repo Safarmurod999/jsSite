@@ -49,15 +49,14 @@ ul {
 }
 
 // navbar start
-
+.nav-sm {
+  display: none;
+}
 header {
   transition: 0.5s;
-  .nav-sm {
-    display: none !important;
-  }
+
   nav {
     padding: 16px 0;
-    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -140,18 +139,19 @@ header {
         }
       }
     }
-    .nav-sm {
-      padding: 8px 12px !important;
-      background-color: #ffffff;
-      position: fixed;
-      display: flex !important;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-      bottom: 0;
-      left: 0;
-    }
+  }
+  .nav-sm {
+    padding: 8px 12px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -168,6 +168,10 @@ header {
     line-height: 150%;
     color: #414141;
   }
+  .row {
+    width: 100%!important;
+    padding: 0 !important;
+  }
   &-link {
     font-style: normal;
     font-weight: 400;
@@ -180,7 +184,7 @@ header {
   }
   &__card {
     position: relative;
-    padding: 0 20px !important;
+    padding: 0 12px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -253,16 +257,19 @@ header {
         background: #e5ffde;
       }
     }
+    img{
+      height: 186px;
+    }
   }
   &__card {
     padding: 8px 30px 8px 40px;
     display: flex;
-    height: 200px;
+    // height: 200px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     border-radius: 4px;
-    overflow: hidden;
+    overflow-x: hidden;
     transition: 0.3s;
     h3 {
       font-style: normal;
@@ -286,7 +293,15 @@ header {
     }
   }
 }
-
+.location{
+  padding: 64px 0 40px;
+  .nav-pills .nav-link{
+    background-color: #F3F2F1;
+  }
+  .nav-pills .nav-link.active{
+    background-color: #70c05b !important;
+  }
+}
 @media (max-width: 992px) {
   .stock__card:last-child {
     display: none !important;

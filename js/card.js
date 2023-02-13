@@ -5,7 +5,7 @@ let stockObject = [
     discount: "../images/notice.png",
     cardPrice: "44,50 ₽",
     defPrice: "50,50 ₽",
-    description: "Г/Ц Блинчики c мясом вес, Россия",
+    description: "Г/Ц Блинчики c мясом вес,вареные, Россия",
   },
   {
     img: "../images/stock-2.png",
@@ -13,7 +13,7 @@ let stockObject = [
     discount: "../images/notice.png",
     cardPrice: "44,50 ₽",
     defPrice: "50,50 ₽",
-    description: "Молоко ПРОСТОКВАШИНО паст...",
+    description: "Молоко ПРОСТОКВАШИНО паст вареные,...",
   },
   {
     img: "../images/stock-3.png",
@@ -98,14 +98,14 @@ let newObject = [
     top: "../images/heart-button.png",
     discount: "../images/notice.png",
     cardPrice: "44,50 ₽",
-    description: "Г/Ц Блинчики c мясом вес, Россия",
+    description: "Г/Ц Блинчики c мясом вес,вареные, Россия",
   },
   {
     img: "../images/new-2.png",
     top: "../images/heart-button.png",
     discount: "../images/notice.png",
     cardPrice: "44,50 ₽",
-    description: "Молоко ПРОСТОКВАШИНО паст...",
+    description: "Молоко ПРОСТОКВАШИНО паст. питьевое...",
   },
   {
     img: "../images/new-3.png",
@@ -184,14 +184,14 @@ let prevObject = [
     top: "../images/heart-button.png",
     discount: "../images/notice.png",
     cardPrice: "44,50 ₽",
-    description: "Г/Ц Блинчики c мясом вес, Россия",
+    description: "Г/Ц Блинчики c мясом вес,вареные, Россия",
   },
   {
     img: "../images/popular-2.png",
     top: "../images/heart-button.png",
     discount: "../images/notice.png",
     cardPrice: "44,50 ₽",
-    description: "Молоко ПРОСТОКВАШИНО паст...",
+    description: "Молоко ПРОСТОКВАШИНО паст вареные,...",
   },
   {
     img: "../images/popular-3.png",
@@ -217,7 +217,7 @@ for (el of prevObject) {
 let specObject = [
   {
     title: "Оформите карту «Северяночка»",
-    text: "И получайте бонусы при покупке в магазинах и на сайте",
+    text: "И получайте бонусы при покупке в магазинах сайте",
     src: "../images/spec-1.png",
   },
   {

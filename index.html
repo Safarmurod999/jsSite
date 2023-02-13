@@ -16,7 +16,7 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="container nav-lg">
+        <div class="container">
           <div class="logo">
             <img class="d-none d-lg-block" src="images/logo.png" alt="..." />
             <img class="d-block d-lg-none" src="images/logo-2.png" alt="..." />
@@ -81,7 +81,12 @@
             </ul>
           </div>
         </div>
-        <div class="container nav-sm">
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="nav-sm">
           <a href="#" class="nav-sm-link"
             ><img src="images/nav-icon-1.png" alt="..."
           /></a>
@@ -98,15 +103,15 @@
             ><img src="images/avatar-icon.png" alt="..."
           /></a>
         </div>
-      </nav>
-    </header>
-    <main>
+      </div>
       <section class="top">
-        <img class="w-100" src="images/sliders.png" alt="..." />
+        <img class="img-fluid" src="images/sliders.png" alt="..." />
       </section>
       <section class="stock">
         <div class="container">
-          <div class="stock-top d-flex flex-row justify-content-between px-2 mb-5">
+          <div
+            class="stock-top d-flex flex-row justify-content-between px-2 mb-5"
+          >
             <h1 class="stock-title">Акции</h1>
             <a class="stock-link" href="#"
               >Bce акции <img src="images/chevron-right.png" alt="..."
@@ -117,7 +122,9 @@
       </section>
       <section class="stock">
         <div class="container">
-          <div class="stock-top d-flex flex-row justify-content-between px-2 mb-5">
+          <div
+            class="stock-top d-flex flex-row justify-content-between px-2 mb-5"
+          >
             <h1 class="stock-title">Новинки</h1>
             <a class="stock-link" href="#"
               >Bce новинки<img src="images/chevron-right.png" alt="..."
@@ -128,7 +135,9 @@
       </section>
       <section class="stock">
         <div class="container">
-          <div class="stock-top d-flex flex-row justify-content-between px-2 mb-5">
+          <div
+            class="stock-top d-flex flex-row justify-content-between px-2 mb-5"
+          >
             <h1 class="stock-title">Покупали раньше</h1>
             <a class="stock-link" href="#"
               >Bce покупки<img src="images/chevron-right.png" alt="..."
@@ -140,6 +149,106 @@
       <section class="special">
         <div class="container">
           <div id="specRow" class="row"></div>
+        </div>
+      </section>
+      <section class="location">
+        <div class="container">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active me-3 mt-3"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                п.Щельяюр
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link me-3 mt-3"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                д.Вертеп
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link me-3 mt-3"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-contact"
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+              >
+                с.Краснобор
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link me-3 mt-3"
+                id="pills-disabled-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-disabled"
+                type="button"
+                role="tab"
+                aria-controls="pills-disabled"
+                aria-selected="false"
+              >
+                д.Диюр
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-home"
+              role="tabpanel"
+              aria-labelledby="pills-home-tab"
+              tabindex="0"
+            >
+              <img class="w-100" src="images/location-1.png" alt="..." />
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-profile"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+              tabindex="0"
+            >
+              <img class="w-100" src="images/location-1.png" alt="..." />
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-contact"
+              role="tabpanel"
+              aria-labelledby="pills-contact-tab"
+              tabindex="0"
+            >
+              <img class="w-100" src="images/location-1.png" alt="..." />
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-disabled"
+              role="tabpanel"
+              aria-labelledby="pills-disabled-tab"
+              tabindex="0"
+            >
+              <img class="w-100" src="images/location-1.png" alt="..." />
+            </div>
+          </div>
         </div>
       </section>
     </main>
