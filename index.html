@@ -11,25 +11,29 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="scss/style.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar fixed-top bg-white">
         <div class="container">
-          <div class="logo">
+          <a href="index.html"><div class="logo">
             <img class="d-none d-lg-block" src="images/logo.png" alt="..." />
             <img class="d-block d-lg-none" src="images/logo-2.png" alt="..." />
-          </div>
-          <div class="search d-flex flex-row justify-content-between">
-            <button class="catalog d-none d-md-flex" onclick="display()" href="#"
-              ><img src="images/menu.png" alt="..." /><span
+          </div></a>
+          <div class="d-flex flex-row flex-grow-1 justify-content-evenly">
+            <button
+              class="catalog d-none d-md-flex"
+              onclick="display()"
+              href="#"
+            >
+              <img src="images/menu.png" alt="..." /><span
                 class="d-none d-xl-block"
                 >Каталог</span
-              ></button
-            >
+              >
+            </button>
             <div class="search-inner position-relative">
-              <input type="search" placeholder="Найти товар" />
+              <input class="searcher" type="search" placeholder="Найти товар" />
               <img
                 class="position-absolute"
                 src="images/search.png"
@@ -48,13 +52,10 @@
               <li>
                 <a href="#"><img src="images/cart-icon.png" alt="..." /></a>
               </li>
-              <li class="dropdown">
+              <li>
                 <a
                   class="nav-link"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  href="#" onclick="openModal()"
                 >
                   <img
                     class="d-none d-xl-block"
@@ -81,32 +82,31 @@
             </ul>
           </div>
         </div>
-       
       </nav>
       <nav id="navbar-catalog" class="navbar">
         <div class="container">
           <div class="catalog-box">
             <div class="row">
               <div class="col-3">
-                <h4>Молоко, сыр, яйцо</h4>
-                <h4>Хлеб</h4>
-                <h4>Фрукты и овощи</h4>
-                <h4>Замороженные продукты</h4>
+                <a href="catalog.html">Молоко, сыр, яйцо</a>
+                <a href="catalog.html">Хлеб</a>
+                <a href="catalog.html">Фрукты и овощи</a>
+                <a href="catalog.html">Замороженные продукты</a>
               </div>
               <div class="col-3">
-                <h4>Напитки</h4>
-                <h4>Кондитерские изделия</h4>
-                <h4>Чай, кофе</h4>
+                <a href="catalog.html">Напитки</a>
+                <a href="catalog.html">Кондитерские изделия</a>
+                <a href="catalog.html">Чай, кофе</a>
               </div>
               <div class="col-3">
-                <h4>Бакалея</h4>
-                <h4>Здоровое питание</h4>
-                <h4>Зоотовары</h4>
+                <a href="catalog.html">Бакалея</a>
+                <a href="catalog.html">Здоровое питание</a>
+                <a href="catalog.html">Зоотовары</a>
               </div>
               <div class="col-3">
-                <h4>Непродовольственные товары</h4>
-                <h4>Детское питание</h4>
-                <h4>Мясо, птица, колбаса</h4>
+                <a href="catalog.html">Непродовольственные товары</a>
+                <a href="catalog.html">Детское питание</a>
+                <a href="catalog.html">Мясо, птица, колбаса</a>
               </div>
             </div>
           </div>
@@ -115,6 +115,18 @@
     </header>
 
     <main>
+      <div id="modalLogin" class="modal">
+        <div class="modal-inner">
+          <form action="index.html">
+            <button class="closer" onclick="closeModal()"><img src="images/close.svg" alt="..."></button>
+          <h3>Вход</h3>
+          <label for="number">Телефон</label>
+          <input type="text" name="number" id="numInput" required>
+          <input type="button" value="Вход" onclick="checkInput()">
+          <div><a href="#">Регистрация</a><a href="#">Забыли пароль?</a></div>
+          </form>
+        </div>
+      </div>
       <div class="container">
         <div class="nav-sm">
           <a href="#" class="nav-sm-link"
@@ -138,7 +150,9 @@
         <img class="w-100" src="images/sliders.png" alt="..." />
       </section>
       <section class="stock">
+
         <div class="container">
+          <div class="alert alert-info results" role="alert"></div>
           <div
             class="stock-top d-flex flex-row justify-content-between px-2 mb-5"
           >
@@ -249,7 +263,15 @@
               aria-labelledby="pills-home-tab"
               tabindex="0"
             >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13326.249405473238!2d53.4135229!3d65.32264149999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4472340bbf53f20d%3A0x6aaf90d406ef7886!2z0KnQtdC70YzRj9GO0YAsINCg0LXRgdC_LiDQmtC-0LzQuCwg0KDQvtGB0YHQuNGP!5e0!3m2!1sru!2s!4v1676284222994!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13326.249405473238!2d53.4135229!3d65.32264149999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4472340bbf53f20d%3A0x6aaf90d406ef7886!2z0KnQtdC70YzRj9GO0YAsINCg0LXRgdC_LiDQmtC-0LzQuCwg0KDQvtGB0YHQuNGP!5e0!3m2!1sru!2s!4v1676284222994!5m2!1sru!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
             <div
               class="tab-pane fade"
@@ -258,7 +280,15 @@
               aria-labelledby="pills-profile-tab"
               tabindex="0"
             >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13339.060365717967!2d53.17753034075058!3d65.29733118422044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x447249e2718cd461%3A0x25c0f625da4e30ed!2z0JLQtdGA0YLQtdC_LCDQoNC10YHQvy4g0JrQvtC80LgsINCg0L7RgdGB0LjRjywgMTY5NDcz!5e0!3m2!1sru!2s!4v1676284450463!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13339.060365717967!2d53.17753034075058!3d65.29733118422044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x447249e2718cd461%3A0x25c0f625da4e30ed!2z0JLQtdGA0YLQtdC_LCDQoNC10YHQvy4g0JrQvtC80LgsINCg0L7RgdGB0LjRjywgMTY5NDcz!5e0!3m2!1sru!2s!4v1676284450463!5m2!1sru!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
             <div
               class="tab-pane fade"
@@ -267,7 +297,15 @@
               aria-labelledby="pills-contact-tab"
               tabindex="0"
             >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13341.641799039!2d53.27239249073133!3d65.29223048406548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x447235dd2ca590b3%3A0xc633232da326cfaf!2z0JrRgNCw0YHQvdC-0LHQvtGALCDQoNC10YHQvy4g0JrQvtC80LgsINCg0L7RgdGB0LjRjywgMTY5NDcz!5e0!3m2!1sru!2s!4v1676284477119!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13341.641799039!2d53.27239249073133!3d65.29223048406548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x447235dd2ca590b3%3A0xc633232da326cfaf!2z0JrRgNCw0YHQvdC-0LHQvtGALCDQoNC10YHQvy4g0JrQvtC80LgsINCg0L7RgdGB0LjRjywgMTY5NDcz!5e0!3m2!1sru!2s!4v1676284477119!5m2!1sru!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
             <div
               class="tab-pane fade"
@@ -276,7 +314,15 @@
               aria-labelledby="pills-disabled-tab"
               tabindex="0"
             >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13350.05338385607!2d53.341141340668706!3d65.27560843356075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x447235aa69816fb7%3A0x7202220934f2d943!2z0JTQuNGO0YAsINCg0LXRgdC_LiDQmtC-0LzQuCwg0KDQvtGB0YHQuNGPLCAxNjk0NzE!5e0!3m2!1sru!2s!4v1676284503745!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13350.05338385607!2d53.341141340668706!3d65.27560843356075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x447235aa69816fb7%3A0x7202220934f2d943!2z0JTQuNGO0YAsINCg0LXRgdC_LiDQmtC-0LzQuCwg0KDQvtGB0YHQuNGPLCAxNjk0NzE!5e0!3m2!1sru!2s!4v1676284503745!5m2!1sru!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -361,6 +407,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/card.js"></script>
+    <script src="js/maincard.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
+
